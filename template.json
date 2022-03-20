@@ -1,0 +1,88 @@
+{
+  "Actor": {
+    "types": ["character", "npc"],
+    "templates": {
+      "base": {
+        "health": {
+          "value": 10,
+          "min": 0,
+          "max": 10
+        },
+        "power": {
+          "value": 5,
+          "min": 0,
+          "max": 5
+        },
+        "biography": ""
+      }
+    },
+    "character": {
+      "templates": ["base"],
+      "attributes": {
+        "level": {
+          "value": 1
+        }
+      },
+      "carac": {
+        "force": {
+          "valeur": 49,
+          "formula": null
+        },      
+        "constitution": {
+          "valeur": 50,
+          "formula": null
+        },
+        "taille": {
+          "valeur": 51,
+          "formula": null
+        },
+        "intelligence": {
+          "valeur": 52,
+          "formula": null
+        },
+        "pouvoir": {
+          "valeur": 53,
+          "formula": null
+        },
+        "dexterite": {
+          "valeur": 54,
+          "formula": null
+        },		
+        "apparence": {
+          "valeur": 55,
+          "formula": null
+        },	
+        "education": {
+          "valeur": 56,
+          "formula": null
+        }
+      }        
+    },
+    "npc": {
+      "templates": ["base"],
+      "cr": 0
+    }
+  },
+
+  "Item": {
+    "types": ["item", "feature", "spell"],
+    "templates": {
+      "base": {
+        "description": ""
+      }
+    },
+    "item": {
+      "templates": ["base"],
+      "quantity": 1,
+      "weight": 0,
+      "formula": "d20 + @str.mod + ceil(@lvl / 2)"
+    },
+    "feature": {
+      "templates": ["base"]
+    },
+    "spell": {
+      "templates": ["base"],
+      "spellLevel": 1
+    }
+  }
+}

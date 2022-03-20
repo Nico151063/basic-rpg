@@ -1,0 +1,26 @@
+{  
+  "basicRpg.CaracFor": "Strength",
+  "basicRpg.CaracCon": "Constitution",
+  "basicRpg.CaracTail": "Size",
+  "basicRpg.CaracInt": "Intelligence",
+  "basicRpg.CaracPou": "Power",
+  "basicRpg.CaracDex": "Dexterity",  
+  "basicRpg.CaracApp": "Apparence",
+  "basicRpg.CaracEdu": "Education",
+
+  "basicRpg.CaracForAbbr": "STR",
+  "basicRpg.CaracConAbbr": "CON",
+  "basicRpg.CaracTailAbbr": "SIZ",
+  "basicRpg.CaracIntAbbr": "INT",
+  "basicRpg.CaracPouAbbr": "POW",
+  "basicRpg.CaracDexAbbr": "DEX",  
+  "basicRpg.CaracAppAbbr": "APP",
+  "basicRpg.CaracEduAbbr": "EDU",
+
+  "basicRpg.EffectCreate": "Create Effect",
+  "basicRpg.EffectToggle": "Toggle Effect",
+  "basicRpg.EffectEdit": "Edit Effect",
+  "basicRpg.EffectDelete": "Delete Effect",
+
+  "basicRpg.Add": "Add"
+}
