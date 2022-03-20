@@ -109,6 +109,9 @@
 .basicRpg .charname-input[type=text]:hover {
   background-color:rgb(200,200,200);
 }
+.basicRpg .charname-input[type=text]:focus {
+  background-color:darkorange
+}
 
 .basicRpg .zone-carac {
   float: left;
@@ -156,6 +159,9 @@
 .basicRpg .carac-input[type=number]:hover {
   background-color:rgb(200,200,200);
 }
+.basicRpg .carac-input[type=number]:focus {
+  background-color:darkorange
+}
 
 .basicRpg .carac-roll {
   float: left;
@@ -165,7 +171,7 @@
   margin: 1px 0px 0px 0px;
   text-align: left;
 }
-.basicRpg .carac-roll:hover , .carac-derivees-value:hover {
+.basicRpg .carac-roll:hover {
   color: #000;
   text-shadow: 0 0 10px red;
   cursor: pointer;
