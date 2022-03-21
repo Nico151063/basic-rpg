@@ -75,10 +75,10 @@ export class basicRpgActorSheet extends ActorSheet {
 		console.log("NIKO _prepareCharacterData ACTO-SHEET.MSJ");
 		console.log(context.data);
 
-		// Handle carac scores.
+		// Handle abilities scores.
 	/*
-		for (let [k, v] of Object.entries(context.data.carac)) {
-			v.label = "clock"; //game.i18n.localize(CONFIG.basicRpg.carac[k]) ?? k;
+		for (let [k, v] of Object.entries(context.data.abilities)) {
+			v.label = "clock"; //game.i18n.localize(CONFIG.basicRpg.abilities[k]) ?? k;
 		}
 */
 	}

@@ -5,7 +5,7 @@
   "basicRpg.CaracInt": "Intelligence",
   "basicRpg.CaracPou": "Power",
   "basicRpg.CaracDex": "Dexterity",  
-  "basicRpg.CaracApp": "Apparence",
+  "basicRpg.CaracApp": "appearence",
   "basicRpg.CaracEdu": "Education",
 
   "basicRpg.CaracForAbbr": "STR",

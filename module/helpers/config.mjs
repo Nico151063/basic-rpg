@@ -4,7 +4,7 @@ export const basicRpg = {};
  * The set of Ability Scores used within the sytem.
  * @type {Object}
  */
- basicRpg.carac = {  
+ basicRpg.abilities = {  
 	"STR": "basicRpg.CaracFor",
 	"CON": "basicRpg.CaracCon",
 	"SIZ": "basicRpg.CaracTail",
@@ -15,7 +15,7 @@ export const basicRpg = {};
 	"EDU": "basicRpg.CaracEdu"
 };
 
-basicRpg.caracAbbreviations = {
+basicRpg.abilitiesAbbreviations = {
 	"STR": "basicRpg.CaracForAbbr",
 	"CON": "basicRpg.CaracConAbbr",
 	"SIZ": "basicRpg.CaracTailAbbr",

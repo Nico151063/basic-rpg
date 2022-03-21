@@ -23,37 +23,37 @@
 					"value": 1
 				}
 			},
-			"carac": {
-				"force": {
-					"valeur": 49,
+			"abilities": {
+				"strength": {
+					"value": 8,
 					"formula": null
 				},      
 				"constitution": {
-					"valeur": 50,
+					"value": 9,
 					"formula": null
 				},
-				"taille": {
-					"valeur": 51,
+				"size": {
+					"value": 10,
 					"formula": null
 				},
 				"intelligence": {
-					"valeur": 52,
+					"value": 11,
 					"formula": null
 				},
-				"pouvoir": {
-					"valeur": 53,
+				"power": {
+					"value": 12,
 					"formula": null
 				},
-				"dexterite": {
-					"valeur": 54,
+				"dexterity": {
+					"value": 14,
 					"formula": null
 				},		
-				"apparence": {
-					"valeur": 55,
+				"appearence": {
+					"value": 16,
 					"formula": null
 				},	
 				"education": {
-					"valeur": 56,
+					"value": 18,
 					"formula": null
 				}
 			}        
