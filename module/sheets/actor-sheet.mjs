@@ -167,6 +167,11 @@ export class basicRpgActorSheet extends ActorSheet {
     // Rollable abilities.
     html.find('.rollable').dblclick(this._onRoll.bind(this));
 
+    // Select Input
+    html.find(".selectInput").click(this._selectInput.bind(this));
+
+
+
     // Drag events for macros.
     if (this.actor.isOwner) {
       let handler = ev => this._onDragStart(ev);
@@ -239,4 +244,15 @@ export class basicRpgActorSheet extends ActorSheet {
     }
   }
 
+  /**
+   * Handle input clicks for select entire text.
+   * @param {Event} event   The originating click event
+   * @private
+   */
+  _selectInput(event) {
+    event.preventDefault();
+    event.currentTarget.select();    
+ }
 }
+
+

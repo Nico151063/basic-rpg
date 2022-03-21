@@ -1,12 +1,10 @@
 <form class="{{cssClass}} {{actor.type}} flexcol" autocomplete="off">
-
   <div class="container">
 
     <img class="profile-img" src="{{actor.img}}" data-edit="img" title="{{actor.name}}" />
 
     <div class="zone-charname">
-      <input class="charname-input" type="text" id="fname" name="name" value="{{actor.name}}" title="Nom du personnage"
-        placeholder="Nom...">
+      <input class="charname-input selectInput" type="text" id="fname" name="name" value="{{actor.name}}" title="Nom du personnage" placeholder="Nom...">
       <div class="zone-carac-derivees">
 
         <div class="row">
@@ -38,81 +36,75 @@
 
       <div class="row">
         <label class="carac-label font-Arial11B">FOR :</label>
-        <input class="carac-input font-Arial11" type="number" title="Valeur de Force du personnage"
-          name="data.carac.force.valeur" value="{{data.carac.force.valeur}}" />
+        <input class="carac-input font-Arial11 selectInput" type="number" title="Valeur de Force du personnage" name="data.carac.force.valeur" value="{{data.carac.force.valeur}}" />
         <label class="carac-roll font-Arial11i rollable" data-roll="d20+4" data-label="Test d'Effort (%)">Jet d'Effort :</label>
-        <label class="carac-derivees-value font-Arial11B rollable" data-roll="d20+4"
-          data-label="Test d'Effort">{{data.carac.force.valeurDerivee}}</label>
+        <label class="carac-derivees-value font-Arial11B rollable" data-roll="d20+4" data-label="Test d'Effort">{{data.carac.force.valeurDerivee}}</label>
       </div>
 
       <div class="row">
         <label class="carac-label font-Arial11B">CON :</label>
-        <input class="carac-input font-Arial11" type="number" title="Valeur de Constitution du personnage"
-          name="data.carac.constitution.valeur" value="{{data.carac.constitution.valeur}}" />
-        <label class="carac-roll font-Arial11i rollable" data-roll="d20+4" data-label="Test d'Endurance (%)">Jet d'Endurance
-          :</label>
-        <label class="carac-derivees-value font-Arial11B rollable" data-roll="d20+4"
-          data-label="Test d'Endurance">{{data.carac.constitution.valeurDerivee}}</label>
+        <input class="carac-input font-Arial11 selectInput" type="number" title="Valeur de Constitution du personnage" name="data.carac.constitution.valeur" value="{{data.carac.constitution.valeur}}" />
+        <label class="carac-roll font-Arial11i rollable" data-roll="d20+4" data-label="Test d'Endurance (%)">Jet d'Endurance :</label>
+        <label class="carac-derivees-value font-Arial11B rollable" data-roll="d20+4" data-label="Test d'Endurance">{{data.carac.constitution.valeurDerivee}}</label>
       </div>
 
       <div class="row">
         <label class="carac-label font-Arial11B">TAI :</label>
-        <input class="carac-input font-Arial11B" type="number" title="Valeur de Taille du personnage"
-          name="data.carac.taille.valeur" value="{{data.carac.taille.valeur}}" />
+        <input class="carac-input font-Arial11B" type="number" title="Valeur de Taille du personnage" name="data.carac.taille.valeur" value="{{data.carac.taille.valeur}}" />
       </div>
 
       <div class="row">
         <label class="carac-label font-Arial11B">INT :</label>
-        <input class="carac-input font-Arial11B" type="number" title="Valeur d'Intelligence du personnage"
+        <input class="carac-input font-Arial11B selectInput" type="number" title="Valeur d'Intelligence du personnage"
           name="data.carac.intelligence.valeur" value="{{data.carac.intelligence.valeur}}" />
-        <label class="carac-roll font-Arial11i rollable" data-roll="d20+4" data-label="Test d'Idée (%)">Jet d'Idées
-          :</label>
-        <label class="carac-derivees-value font-Arial11B rollable" data-roll="d20+4"
-          data-label="Test d'Idée">{{data.carac.intelligence.valeurDerivee}}</label>
+        <label class="carac-roll font-Arial11i rollable" data-roll="d20+4" data-label="Test d'Idée (%)">Jet d'Idées :</label>
+        <label class="carac-derivees-value font-Arial11B rollable" data-roll="d20+4" data-label="Test d'Idée">{{data.carac.intelligence.valeurDerivee}}</label>
       </div>
 
       <div class="row">
         <label class="carac-label font-Arial11B">POU :</label>
-        <input class="carac-input font-Arial11B" type="number" title="Valeur de Pouvoir du personnage"
-          name="data.carac.pouvoir.valeur" value="{{data.carac.pouvoir.valeur}}" />
-        <label class="carac-roll font-Arial11i rollable" data-roll="d20+4" data-label="Test de Chance (%)">Jet de Chance
-          :</label>
-        <label class="carac-derivees-value font-Arial11B rollable" data-roll="d20+4"
-          data-label="Test de Chance">{{data.carac.pouvoir.valeurDerivee}}</label>
+        <input class="carac-input font-Arial11B selectInput" type="number" title="Valeur de Pouvoir du personnage" name="data.carac.pouvoir.valeur" value="{{data.carac.pouvoir.valeur}}" />
+        <label class="carac-roll font-Arial11i rollable" data-roll="d20+4" data-label="Test de Chance (%)">Jet de Chance :</label>
+        <label class="carac-derivees-value font-Arial11B rollable" data-roll="d20+4"data-label="Test de Chance">{{data.carac.pouvoir.valeurDerivee}}</label>
       </div>
 
       <div class="row">
         <label class="carac-label font-Arial11B">DEX :</label>
-        <input class="carac-input font-Arial11B" type="number" title="Valeur de Dexterité du personnage"
-          name="data.carac.dexterite.valeur" value="{{data.carac.dexterite.valeur}}" />
-        <label class="carac-roll font-Arial11i rollable" data-roll="d20+4" data-label="Test d'agilité (%)">Jet d'Agilité
-          :</label>
-        <label class="carac-derivees-value font-Arial11B rollable" data-roll="d20+4"
-          data-label="Test d'agilité">{{data.carac.dexterite.valeurDerivee}}</label>
+        <input class="carac-input font-Arial11B selectInput" type="number" title="Valeur de Dexterité du personnage" name="data.carac.dexterite.valeur" value="{{data.carac.dexterite.valeur}}" />
+        <label class="carac-roll font-Arial11i rollable" data-roll="d20+4" data-label="Test d'agilité (%)">Jet d'Agilité :</label>
+        <label class="carac-derivees-value font-Arial11B rollable" data-roll="d20+4" data-label="Test d'agilité">{{data.carac.dexterite.valeurDerivee}}</label>
       </div>
 
       <div class="row">
         <label class="carac-label font-Arial11B">APP :</label>
-        <input class="carac-input font-Arial11B" type="number" title="Valeur d'Apparence du personnage"
-          name="data.carac.apparence.valeur" value="{{data.carac.apparence.valeur}}" />
-        <label class="carac-roll font-Arial11i rollable" data-roll="d20+4" data-label="Test de Charisme (%)">Jet de Charisme
-          :</label>
-        <label class="carac-derivees-value font-Arial11B rollable" data-roll="d20+4"
-          data-label="Test de Charisme">{{data.carac.apparence.valeurDerivee}}</label>
+        <input class="carac-input font-Arial11B selectInput" type="number" title="Valeur d'Apparence du personnage" name="data.carac.apparence.valeur" value="{{data.carac.apparence.valeur}}" />
+        <label class="carac-roll font-Arial11i rollable" data-roll="d20+4" data-label="Test de Charisme (%)">Jet de Charisme :</label>
+        <label class="carac-derivees-value font-Arial11B rollable" data-roll="d20+4" data-label="Test de Charisme">{{data.carac.apparence.valeurDerivee}}</label>
       </div>
 
       <div class="row">
         <label class="carac-label font-Arial11B">EDU :</label>
-        <input class="carac-input font-Arial11B" type="number" title="Valeur d'Education du personnage"
-          name="data.carac.education.valeur" value="{{data.carac.education.valeur}}" />
-        <label class="carac-roll font-Arial11i rollable" data-roll="d20+4" data-label="Test de connaissances (%)">Jet de
-          Connaissances :</label>
-        <label class="carac-derivees-value font-Arial11B rollable" data-roll="d20+4"
-          data-label="Test de connaissances">{{data.carac.education.valeurDerivee}}</label>
+        <input class="carac-input font-Arial11B selectInput" type="number" title="Valeur d'Education du personnage" name="data.carac.education.valeur" value="{{data.carac.education.valeur}}" />
+        <label class="carac-roll font-Arial11i rollable" data-roll="d20+4" data-label="Test de connaissances (%)">Jet de Connaissances :</label>
+        <label class="carac-derivees-value font-Arial11B rollable" data-roll="d20+4" data-label="Test de connaissances">{{data.carac.education.valeurDerivee}}</label>
       </div>
     </div>
 
   </div>
+
+    {{!-- Sheet Tab Navigation --}}
+    <nav class="sheet-tabs tabs" data-group="primary">
+      {{!-- Default tab is specified in actor-sheet.mjs --}}
+      <a class="item" data-tab="features">Features</a>
+      <a class="item" data-tab="description">Description</a>
+      <a class="item" data-tab="items">Items</a>
+      <a class="item" data-tab="spells">Spells</a>
+      <a class="item" data-tab="effects">Effects</a>
+    </nav>
+  
+
+
+
 
   <!--  
   {{!-- Sheet Header --}}
@@ -160,47 +152,14 @@
   -->
 
 
-  {{!-- Sheet Tab Navigation --}}
-  <nav class="sheet-tabs tabs" data-group="primary">
-    {{!-- Default tab is specified in actor-sheet.mjs --}}
-    <a class="item" data-tab="features">Features</a>
-    <a class="item" data-tab="description">Description</a>
-    <a class="item" data-tab="items">Items</a>
-    <a class="item" data-tab="spells">Spells</a>
-    <a class="item" data-tab="effects">Effects</a>
-  </nav>
+ 
 
   {{!-- Sheet Body --}}
   <section class="sheet-body">
 
     {{!-- Owned Features Tab --}}
     <div class="tab features" data-group="primary" data-tab="features">
-      <section class="grid grid-3col">
-        <aside class="sidebar">
-
-          {{!-- The grid classes are defined in scss/global/_grid.scss. To use,
-          use both the "grid" and "grid-Ncol" class where "N" can be any number
-          from 1 to 12 and will create that number of columns. --}}
-
-          <!--
-          <div class="abilities flexcol">
-            {{#each data.carac as |carac key|}}
-            <div class="ability flexrow flex-group-center">
-              <label for="data.carac.{{key}}.value" class="resource-label rollable flexlarge align-left"
-                data-roll="d20+@carac.{{key}}.mod" data-label="{{carac.label}}">{{carac.label}}</label>
-              <input type="text" name="data.carac.{{key}}.value" value="{{carac.value}}" data-dtype="Number" />
-
-               NIKO Format/Accès données 
-              <span class="ability-mod rollable" data-roll="d20+@carac.{{key}}.mod"
-                data-label="{{carac.label}}">{{numberFormat
-                carac.mod decimals=0 sign=true}}</span>
-
-            </div>
-            {{/each}}
-          </div>
-          -->
-
-        </aside>
+      <section class="grid grid-2col">
 
         {{!-- For the main features list, span the right two columns --}}
         <section class="main grid-span-2">
@@ -236,4 +195,5 @@
     </div>
 
   </section>
+
 </form>

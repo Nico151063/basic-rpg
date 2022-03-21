@@ -4,7 +4,7 @@
 .window-app {
   background-color: burlywood;
   background-color:blue;
-  min-width: 665px;
+  /*min-width: 665px;*/
 }
 
 
@@ -65,9 +65,10 @@
   margin-bottom: 4px;
 }
 
-
+/*------------------------------------------------------------*/
 .basicRpg .container {
-  border: 0px solid red;
+  border: 1px hidden red;
+  
 }
 
 .basicRpg .profile-img {
@@ -163,6 +164,7 @@
   background-color:darkorange
 }
 
+
 .basicRpg .carac-roll {
   float: left;
   height: 15px;
@@ -215,6 +217,31 @@
 }
 
 
+
+/* Originaux */
+.basicRpg .sheet-tabs {
+  -webkit-box-flex: 0;
+  -ms-flex: 0;
+  flex: 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ---------------------------------------------------*/
+
+
 input[type=text], select {
   width: 100%;
   height: 18px;
@@ -233,14 +260,6 @@ input[type=text], select {
 
 
 
-
-/* ---------------------------------------------------*/
-
-
-
-
-
-
 .rollable:hover, .rollable:focus {
   color: #000;
   text-shadow: 0 0 10px red;
@@ -252,7 +271,7 @@ input[type=text], select {
   display: grid;
   grid-column: span 2 / span 2;
   grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 10px;
+  gap: 20px;
   margin: 10px 0;
   padding: 0;
 }
@@ -260,6 +279,7 @@ input[type=text], select {
 .grid-3col {
   grid-column: span 3 / span 3;
   grid-template-columns: repeat(3, minmax(0, 1fr));
+  border: 3px solid red;
 }
 
 .grid-4col {
@@ -514,12 +534,6 @@ input[type=text], select {
   margin: 0;
 }
 
-.basicRpg .sheet-tabs {
-  -webkit-box-flex: 0;
-  -ms-flex: 0;
-  flex: 0;
-}
-
 .basicRpg .sheet-body,
 .basicRpg .sheet-body .tab,
 .basicRpg .sheet-body .tab .editor {
@@ -539,15 +553,15 @@ input[type=text], select {
 }
 
 .basicRpg .items-header {
-  height: 28px;
+  height: 38px;
   margin: 2px 0;
   padding: 0;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
   background: rgba(0, 0, 0, 0.05);
-  border: 2px groove #eeede0;
-  font-weight: bold;
+  border: 2px solid #eeede0;
+  font-weight: bold;  
 }
 
 .basicRpg .items-header > * {
@@ -571,12 +585,13 @@ input[type=text], select {
   overflow-y: auto;
   scrollbar-width: thin;
   color: #444;
+  border: 1px solid blue;
 }
 
 .basicRpg .items-list .item-list {
   list-style: none;
   margin: 0;
-  padding: 0;
+  padding: 0;  
 }
 
 .basicRpg .items-list .item-name {
@@ -593,6 +608,8 @@ input[type=text], select {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  border: 1px solid black;
+  
 }
 
 .basicRpg .items-list .item-name h3, .basicRpg .items-list .item-name h4 {
