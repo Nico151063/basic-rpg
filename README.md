@@ -1,6 +1,6 @@
 # Basic RPG System
 
-System BASIC RPG from Chaosium.
+System BASIC RPG from Chaosium par Grimmbart de Ferdock.
 
 Cette œuvre est créée sous Licence ludique libre BRP.
 Licence ludique libre BRP v 1.0 © copyright 2020 Chaosium Inc.
