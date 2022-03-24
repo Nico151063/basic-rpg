@@ -13,7 +13,7 @@ export class basicRpgActorSheet extends ActorSheet {
 			template: "systems/basic-rpg/templates/actor/actor-sheet.html",
 			width: 680,
 			height: 600,
-			tabs: [{ navSelector: ".sheet-tabs", contentSelector: ".sheet-body", initial: "features" }]
+			tabs: [{ navSelector: ".sheet-tabs", contentSelector: ".sheet-body", initial: "skills" }]
 		});
 	}
 
@@ -94,6 +94,7 @@ export class basicRpgActorSheet extends ActorSheet {
 		// Initialize containers.
 		const gear = [];
 		const features = [];
+		const skills = [];
 		const spells = {
 			0: [],
 			1: [],
@@ -118,6 +119,10 @@ export class basicRpgActorSheet extends ActorSheet {
 			else if (i.type === 'feature') {
 				features.push(i);
 			}
+			// Append to skills.
+			else if (i.type === 'skill') {
+				skills.push(i);
+			}
 			// Append to spells.
 			else if (i.type === 'spell') {
 				if (i.data.spellLevel != undefined) {
@@ -129,6 +134,7 @@ export class basicRpgActorSheet extends ActorSheet {
 		// Assign and return
 		context.gear = gear;
 		context.features = features;
+		context.skills = skills;
 		context.spells = spells;
 	}
 

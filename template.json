@@ -65,7 +65,7 @@
 	},
 
 	"Item": {
-		"types": ["item", "feature", "spell"],
+		"types": ["item", "feature", "spell", "skill"],
 		"templates": {
 			"base": {
 				"description": ""
@@ -79,6 +79,12 @@
 		},
 		"feature": {
 			"templates": ["base"]
+		},
+		"skill": {
+			"templates": [],
+			"description": "",
+			"baseValue":0,
+			"formula": null		
 		},
 		"spell": {
 			"templates": ["base"],
