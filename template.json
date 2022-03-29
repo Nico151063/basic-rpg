@@ -81,9 +81,9 @@
 			"templates": ["base"]
 		},
 		"skill": {
-			"templates": [],
-			"description": "",
-			"baseValue":0,
+			"templates": ["base"],
+			"baseValue":10,
+			"rollValue":12,
 			"formula": null		
 		},
 		"spell": {
