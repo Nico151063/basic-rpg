@@ -272,24 +272,27 @@
 
 .basicRpg .list-skills .skill-font-baseValue {
 	font-style: italic;
-	    font-weight: normal;
+	font-weight: normal;
 }
 
 .basicRpg .sheet-body .list-skills .items-header {
     height: 21px;
-    width: 300px;      
+    width: 320px;      
     margin: 0;
     padding: 0 0 0 5px;    
     display: flex;
     align-items: center;  
-    background-color: rgb(64, 64, 64);
-    color: white;    
-	border: none;    
+    background-color: rgb(64, 64, 64);    
+	border-top: 1px solid black;
+	border-Left: 1px solid black;
+	border-right: 1px solid black;
+	border-bottom: none;
+	color: white;
 }
 
 .basicRpg .sheet-body .list-skills .item {
 	height: 21px;
-	width: 300px;    
+	width: 320px;    
 	margin: 0;
   	padding: 0 0 0 5px;    
 	display: flex;
@@ -306,12 +309,11 @@
   border-bottom: 1px solid black;
 }
 
-
 .basicRpg .list-skills .skill-name {
-    width: 300px;
+    width: 250px;
     margin: 0;
     padding: 2px;    
-    text-align: left;        
+    text-align: left;        	
 }
 
 .basicRpg .list-skills .skill-baseValue {
@@ -330,28 +332,15 @@
 
 
 
-
-
-.basicRpg .list-skills .item-controls {
-  display: flex;
-  flex: 0 0 100px;
-  justify-content: flex-end;
+.basicRpg .list-skills .skill-controls {
+  	width: 50px;
+	margin: 0;
+	padding-left: 4px;  	
+	border-Left: 1px solid black;
 }
 
 
-.basicRpg .list-skills .item .item-name {
-  color: #191813;
-}
 
-.basicRpg .list-skills .item .item-name .item-image {
-  -webkit-box-flex: 0;
-  -ms-flex: 0 0 30px;
-  flex: 0 0 30px;
-  height: 30px;
-  background-size: 30px;
-  border: none;
-  margin-right: 5px;
-}
 
 
 
