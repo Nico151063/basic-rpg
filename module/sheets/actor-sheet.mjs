@@ -32,10 +32,6 @@ export class basicRpgActorSheet extends ActorSheet {
 		// editable, the items array, and the effects array.
 		const context = super.getData();
 
-		console.log("---------------------------------------");
-		console.log("NIKO getData");
-
-
 		// Use a safe clone of the actor data for further operations.
 		const actorData = this.actor.data.toObject(false);
 
@@ -63,26 +59,7 @@ export class basicRpgActorSheet extends ActorSheet {
 		return context;
 	}
 
-	/**
-	 * Organize and classify Items for Character sheets.
-	 *
-	 * @param {Object} actorData The actor to prepare.
-	 *
-	 * @return {undefined}
-	 */
-	_prepareCharacterData(context) {
-		
-		console.log("NIKO _prepareCharacterData ACTO-SHEET.MSJ");
-		console.log(context.data);
-
-		// Handle abilities scores.
-	/*
-		for (let [k, v] of Object.entries(context.data.abilities)) {
-			v.label = "clock"; //game.i18n.localize(CONFIG.basicRpg.abilities[k]) ?? k;
-		}
-*/
-	}
-
+	
 	/**
 	 * Organize and classify Items for Character sheets.
 	 *
@@ -138,6 +115,34 @@ export class basicRpgActorSheet extends ActorSheet {
 		context.spells = spells;
 	}
 
+	/**
+	 * Organize and classify Items for Character sheets.
+	 *
+	 * @param {Object} actorData The actor to prepare.
+	 *
+	 * @return {undefined}
+	 */
+	_prepareCharacterData(actorData) {
+
+		// Skills NIKO
+		console.clear();
+		console.log(actorData.skills);
+		if (actorData.skills) {
+			for (let [s, skl] of Object.entries(actorData.skills)) {
+				skl.data.icon = this._getExperiencedIcon(skl.data.experienced);
+				console.log("Skills "
+					+ skl.name
+					+ " : \n"
+					+ "   experienced = " + skl.data.experienced
+					+ " : \n"
+					+ "   icon        = " + skl.data.icon
+				);
+			}
+		}
+	}
+
+
+
 	/* -------------------------------------------- */
 
 	/** @override */
@@ -172,6 +177,10 @@ export class basicRpgActorSheet extends ActorSheet {
 
 		// Rollable abilities.
 		html.find('.rollable').dblclick(this._onRoll.bind(this));
+
+		// Skill Experience Toggling
+		html.find(".skill-experience-toggle").click(this._onToggleSkillExperience.bind(this));
+
 
 		// Select Input
 		html.find(".selectInput").click(this._selectInput.bind(this));
@@ -258,7 +267,55 @@ export class basicRpgActorSheet extends ActorSheet {
 	_selectInput(event) {
 		event.preventDefault();
 		event.currentTarget.select();    
- }
+ 
+	
+	
+	
+	
+	}
+
+
+	/**
+	 * Get the font-awesome icon used to display a certain level of skill proficiency.
+	 * @param {number} level  A proficiency mode defined in `CONFIG.DND5E.proficiencyLevels`.
+	 * @returns {string}      HTML string for the chosen icon.
+	 * @private
+	 */
+	_getExperiencedIcon(level) {
+		const icons = {
+			0: 'far fa-circle',			
+			1: 'far fa-check-circle',
+			2: 'fas fa-check-double'
+		};
+		return icons[level] || icons[0];
+	}
+
+	/**
+	 * Handle toggling the experienced value of an Owned Skill within the Actor.
+	 * @param {Event} event        The triggering click event.
+	 */
+	_onToggleSkillExperience(event) {
+		event.preventDefault();
+			
+		// Get the current selected item
+		const itemId = event.currentTarget.closest(".item").dataset.itemId;
+		const item = this.actor.items.get(itemId);
+
+		// Get the Experienced value of the current selected item
+		var _experienced = item.data.data.experienced;
+
+		// Compute value
+		_experienced++;
+		if (_experienced > 2) {
+			_experienced = 0;
+		}
+
+		this.actor.testNicolas();
+
+		// Update Item
+		return item.update({ ["data.experienced"]: _experienced });
+
+	}
 }
 
 

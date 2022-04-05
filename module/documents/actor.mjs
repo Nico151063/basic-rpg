@@ -29,9 +29,6 @@ export class basicRpgActor extends Actor {
      * is queried and has a roll executed directly from it).
      */
     prepareDerivedData() {
-
-        console.log("**************** NIKO prepareDerivedData");
-
         const actorData = this.data;
         const data = actorData.data;
         const flags = actorData.flags.basicRpg || {};
@@ -40,6 +37,17 @@ export class basicRpgActor extends Actor {
         // things organized.
         this._prepareCharacterData(actorData);
         this._prepareNpcData(actorData);
+    }
+
+    /* 
+    this.actor.testNicolas();
+    */
+    testNicolas() {
+        
+        console.log("On est passé");
+        
+        var v1 = 12;
+        return v1;
     }
 
     /**
@@ -84,10 +92,8 @@ export class basicRpgActor extends Actor {
         actorData.data.damageBonus = calcDamageBonus(actorData.data.abilities.strength.value + actorData.data.abilities.size.value);
         // Major wounds calculation        
         actorData.data.hitPoints.majorWounds = calcMajorWounds(actorData.data.hitPoints.max);
+
     }
-
-
-
 
 
     /**
@@ -200,3 +206,4 @@ function calcMajorWounds(hPoints) {
     var resultat = Math.floor(hPoints / 2);
     return resultat;
 }
+ 

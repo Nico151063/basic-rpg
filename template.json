@@ -82,8 +82,9 @@
 		},
 		"skill": {
 			"templates": ["base"],
-			"baseValue":10,
-			"rollValue":12,
+			"baseValue": 10,
+			"rollValue": 12,
+			"experienced": 0,
 			"formula": null		
 		},
 		"spell": {

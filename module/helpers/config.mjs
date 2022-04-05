@@ -25,3 +25,14 @@ basicRpg.abilitiesAbbreviations = {
 	"APP": "basicRpg.CaracAppAbbr",
 	"EDU": "basicRpg.CaracEduAbbr"
 };
+
+/**
+ * Skill, ability, and tool proficiency levels.
+ * The key for each level represents its proficiency multiplier.
+ * @enum {string}
+ */
+basicRpg.skillExperiencedIcon = {
+	0: "basicRpg.NotExperienced",
+	1: "basicRpg.Experienced",	
+	2: "basicRpg.Specialist"
+};

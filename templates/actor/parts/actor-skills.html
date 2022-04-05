@@ -11,8 +11,11 @@
 	<!-- Loop to show SkillsList -->
 	{{#each skills as |item id|}}
 		<li class="item" data-item-id="{{item._id}}">
+			<div class="skill-experience" title="Montée de niveau">
+				<a class="skill-experience-toggle" title="Montée de niveau"><i class="{{item.data.icon}}"></i></a>
+			</div>
 			<div class="skill-name skill-fonts">
-				{{item.name}} 
+				{{item.name}}
 				<span class="skill-font-baseValue" title="Valeur de base de la compétence">({{item.data.baseValue}}%)</span>
 			</div>
 			<div class="skill-rollValue skill-fonts rollable" data-roll-type="item">
